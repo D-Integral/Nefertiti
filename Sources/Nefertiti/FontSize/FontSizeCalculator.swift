@@ -8,9 +8,13 @@
 import Foundation
 import UIKit
 
-class FontSizeCalculator: FontSizeCalculatorProtocol {
+public class FontSizeCalculator: FontSizeCalculatorProtocol {
     
     // MARK: Public Interface
+    
+    public init() {
+        
+    }
     
     public func fontSizeThatFits(_ source: FontSizeCalculatorSourceProtocol) -> CGFloat {
         if source.text.isEmpty {

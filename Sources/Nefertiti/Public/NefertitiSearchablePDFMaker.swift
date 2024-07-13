@@ -13,8 +13,8 @@ import NefertitiFile
 public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
     public var fontSizeCalculator: FontSizeCalculatorProtocol
     
-    init(fontSizeCalculator: FontSizeCalculatorProtocol = FontSizeCalculator()) {
-        self.fontSizeCalculator = fontSizeCalculator
+    public init() {
+        self.fontSizeCalculator = FontSizeCalculator()
     }
     
     public func generatePdfDocumentFile(from documentImages: [UIImage],
