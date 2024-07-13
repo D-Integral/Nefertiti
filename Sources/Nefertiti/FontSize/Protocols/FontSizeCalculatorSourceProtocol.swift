@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol FontSizeCalculatorSourceProtocol {
+public protocol FontSizeCalculatorSourceProtocol {
     var text: String { get }
     var fontSizeRange: FontSizeRange { get }
     var rectSize: CGSize { get }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol FontSizeCalculatorProtocol {
+public protocol FontSizeCalculatorProtocol {
     func fontSizeThatFits(_ source: FontSizeCalculatorSourceProtocol) -> CGFloat
 }

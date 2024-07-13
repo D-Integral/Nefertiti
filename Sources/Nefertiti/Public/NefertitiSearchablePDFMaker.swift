@@ -10,8 +10,8 @@ import UIKit
 import Vision
 import NefertitiFile
 
-public class Nefertiti: PDFMakerProtocol {
-    var fontSizeCalculator: FontSizeCalculatorProtocol
+public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
+    public var fontSizeCalculator: FontSizeCalculatorProtocol
     
     init(fontSizeCalculator: FontSizeCalculatorProtocol = FontSizeCalculator()) {
         self.fontSizeCalculator = fontSizeCalculator

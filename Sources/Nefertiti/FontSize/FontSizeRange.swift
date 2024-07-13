@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FontSizeRange: FontSizeRangeProtocol {
+public struct FontSizeRange: FontSizeRangeProtocol {
     
     // MARK: - Public Interface
     
