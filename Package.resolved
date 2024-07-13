@@ -5,8 +5,17 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/D-Integral/NefertitiFile",
       "state" : {
-        "revision" : "eea5c9f3899b6d0013dc24921144d7d371100d09",
-        "version" : "1.0.3"
+        "revision" : "4765272f223c8ff3b85be50526d523c3d6dc1a5f",
+        "version" : "1.0.4"
+      }
+    },
+    {
+      "identity" : "nefertitifontsizecalculator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/D-Integral/NefertitiFontSizeCalculator",
+      "state" : {
+        "revision" : "ae9d57ab63274f1c64e0cefc04429638185b13b3",
+        "version" : "1.0.1"
       }
     }
   ],

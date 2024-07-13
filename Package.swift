@@ -15,14 +15,16 @@ let package = Package(
             targets: ["Nefertiti"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/D-Integral/NefertitiFile", from: "1.0.3")
+        .package(url: "https://github.com/D-Integral/NefertitiFile", from: "1.0.4"),
+        .package(url: "https://github.com/D-Integral/NefertitiFontSizeCalculator", from: "1.0.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Nefertiti", dependencies: [
-                "NefertitiFile"
+                "NefertitiFile",
+                "NefertitiFontSizeCalculator"
             ]),
         .testTarget(
             name: "NefertitiTests",

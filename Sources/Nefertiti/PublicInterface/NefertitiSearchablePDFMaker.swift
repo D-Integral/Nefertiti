@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 import Vision
 import NefertitiFile
+import NefertitiFontSizeCalculator
 
 public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
-    public var fontSizeCalculator: FontSizeCalculatorProtocol
+    public var fontSizeCalculator: NefertitiFontSizeCalculatorProtocol
     
     public init() {
-        self.fontSizeCalculator = FontSizeCalculator()
+        self.fontSizeCalculator = NefertitiFontSizeCalculator()
     }
     
     public func generatePdfDocumentFile(from documentImages: [UIImage],
@@ -182,8 +183,8 @@ public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
         let transformedRect: CGRect = VNImageRectForNormalizedRect(boundingBox.boundingBox,
                                                                    Int(pageWidth),
                                                                    Int(pageHeight)).applying(transform)
-        let fontSize = fontSizeCalculator.fontSizeThatFits(FontSizeCalculatorSource(text: text,
-                                                                                    rectSize: transformedRect.size))
+        let fontSize = fontSizeCalculator.fontSizeThatFits(NefertitiFontSizeCalculatorSource(text: text,
+                                                                                             rectSize: transformedRect.size))
         let font = UIFont.systemFont(ofSize: fontSize)
         
         let attributedString = NSAttributedString(string: text,

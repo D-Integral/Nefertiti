@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 import NefertitiFile
+import NefertitiFontSizeCalculator
 
 public protocol NefertitiPDFMakerProtocol {
-    var fontSizeCalculator: FontSizeCalculatorProtocol { get }
+    var fontSizeCalculator: NefertitiFontSizeCalculatorProtocol { get }
     
     func generatePdfDocumentFile(from documentImages: [UIImage],
                                  completionHandler: @escaping ((any NefertitiFileProtocol)?, Error?) -> ()) -> ()?
