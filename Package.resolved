@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "nefertitifile",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/D-Integral/NefertitiFile",
+      "state" : {
+        "revision" : "eea5c9f3899b6d0013dc24921144d7d371100d09",
+        "version" : "1.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
