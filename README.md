@@ -8,6 +8,7 @@ Here is an example of usage Nefertiti with VisionKit:
 ```Swift
     import Nefertiti
     import NefertitiFile
+    import VisionKit
 
     let nefertiti: NefertitiPDFMakerProtocol = NefertitiSearchablePDFMaker()
     var pdfDocumentSavingOperation: ((any NefertitiFileProtocol) -> ())?
