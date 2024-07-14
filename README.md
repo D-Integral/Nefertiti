@@ -39,6 +39,8 @@ Here is an example of usage Nefertiti with VisionKit:
 
 Read the <A HREF=https://github.com/D-Integral/NefertitiFile/>NefertitiFile</A> library documentation for the examples of <Code>NefertitiFileProtocol</Code> usage.
 
+<A HREF=https://github.com/D-Integral/PDFReaderApp>This</A> project is an example of using Nefertiti.
+
 The articles I recommend to read to understand the topic better:
 <BR>
 <A HREF=https://alexanderweiss.dev/blog/2020-11-28-from-uiimage-to-searchable-pdf-part-1>From UIImage to searchable PDF</A> by Alexander Weiß.
