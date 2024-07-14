@@ -52,6 +52,8 @@ Here is an example of NefertitiFileProtocol usage:
     }
 ```
 
+NefertitiFileProtocol has properties <Code>documentDataUrl</Code> and <Code>thumbnailDataUrl</Code>. The first of them is a url to the whole document data and the last one is a link to a thumbnail which you may use for a small document preview.
+
 The articles I recommend to read to understand the topic better:
 <BR>
 <A HREF=https://alexanderweiss.dev/blog/2020-11-28-from-uiimage-to-searchable-pdf-part-1>From UIImage to searchable PDF</A> by Alexander Weiß.
