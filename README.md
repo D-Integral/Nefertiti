@@ -1,14 +1,19 @@
 # Nefertiti
 Nefertiti by Dmytro Skorokhod is an open source iOS library for making searchable PDF documents from photos. It takes an array of UIImage objects and returns a file confirming to NefertitiFileProtocol.
 
-The usage example:
+Nefertiti is available as a Swift package. To start using the library add package dependancy, then import Nefertiti and NefertitiFile into your source code file.
+
+Here is an example of usage Nefertiti with VisionKit:
 
 ```Swift
+    import Nefertiti
+    import NefertitiFile
+
     let nefertiti: NefertitiPDFMakerProtocol = NefertitiSearchablePDFMaker()
-    
     var pdfDocumentSavingOperation: ((any NefertitiFileProtocol) -> ())?
 
-    func documentCameraViewController(_ controller: VNDocumentCameraViewController,
+    extension VisionDocumentCameraManager: VNDocumentCameraViewControllerDelegate {
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController,
                                       didFinishWith scan: VNDocumentCameraScan) {
           var pageImages = [UIImage]()
         
@@ -23,11 +28,28 @@ The usage example:
               }
 
               guard let file = file,
-                    let pdfDocumentSavingOperation = self?.pdfDocumentSavingOperation else { return }
+                    let pdfDocumentSavingOperation = pdfDocumentSavingOperation else { return }
             
               pdfDocumentSavingOperation(file)
           }
-      }
+       }
+    }
+```
+
+Here is an example of NefertitiFileProtocol usage:
+```Swift
+    import NefertitiFile
+    
+    var file: (any NefertitiFileProtocol)?
+    
+    func activityViewController(with file: (any NefertitiFileProtocol)) -> UIActivityViewController? {
+        guard let pdfDocumentDataUrl = file.documentDataUrl else { return nil }
+    
+        let activityViewController = UIActivityViewController(activityItems: [pdfDocumentDataUrl],
+                                                              applicationActivities: nil)
+    
+        return activityViewController
+    }
 ```
 
 The articles I recommend to read to understand the topic better:
