@@ -1,5 +1,5 @@
 # Nefertiti
-Nefertiti by Dmytro Skorokhod is an open source iOS library for making searchable PDF documents from photos. It takes an array of UIImage objects and returns a file confirming to NefertitiFileProtocol.
+Nefertiti by <A HREF=https://www.linkedin.com/in/dmytro-skorokhod-b480b845/>Dmytro Skorokhod</A> is an open source iOS library for making searchable PDF documents from photos. It takes an array of UIImage objects and returns a file confirming to NefertitiFileProtocol.
 
 Nefertiti is available as a Swift package. To start using the library add package dependancy, then import Nefertiti and NefertitiFile into your source code file.
 
@@ -36,23 +36,7 @@ Here is an example of usage Nefertiti with VisionKit:
     }
 ```
 
-Here is an example of NefertitiFileProtocol usage:
-```Swift
-    import NefertitiFile
-    
-    var file: (any NefertitiFileProtocol)?
-    
-    func activityViewController(with file: (any NefertitiFileProtocol)) -> UIActivityViewController? {
-        guard let pdfDocumentDataUrl = file.documentDataUrl else { return nil }
-    
-        let activityViewController = UIActivityViewController(activityItems: [pdfDocumentDataUrl],
-                                                              applicationActivities: nil)
-    
-        return activityViewController
-    }
-```
-
-NefertitiFileProtocol has properties <Code>documentDataUrl</Code> and <Code>thumbnailDataUrl</Code>. The first of them is a url to the whole document data and the last one is a link to a thumbnail which you may use for a small document preview.
+Read the <A HREF=https://github.com/D-Integral/NefertitiFile/>NefertitiFile</A> library documentation for the examples of <Code>NefertitiFileProtocol</Code> usage.
 
 The articles I recommend to read to understand the topic better:
 <BR>
