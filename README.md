@@ -21,7 +21,7 @@ Here is an example of usage Nefertiti with VisionKit:
               pageImages.append(scan.imageOfPage(at: pageIndex))
           }
         
-          nefertiti.generatePdfDocumentFile(from: images) { [weak self] file, error in
+          nefertiti.generatePdfDocumentFile(from: images) { file, error in
               if let error = error {
                   debugPrint(error)
                   return
