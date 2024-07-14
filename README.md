@@ -4,7 +4,7 @@ Nefertiti by Dmytro Skorokhod is an open source iOS library for making searchabl
 The usage example:
 
 ```Swift
-    let pdfMaker: NefertitiPDFMakerProtocol = NefertitiSearchablePDFMaker()
+    let nefertiti: NefertitiPDFMakerProtocol = NefertitiSearchablePDFMaker()
     
     var pdfDocumentSavingOperation: ((any NefertitiFileProtocol) -> ())?
 
@@ -16,7 +16,7 @@ The usage example:
               pageImages.append(scan.imageOfPage(at: pageIndex))
           }
         
-          pdfMaker.generatePdfDocumentFile(from: images) { [weak self] file, error in
+          nefertiti.generatePdfDocumentFile(from: images) { [weak self] file, error in
               if let error = error {
                   debugPrint(error)
                   return
