@@ -13,7 +13,7 @@ import NefertitiFontSizeCalculator
 
 public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
     public var fontSizeCalculator: NefertitiFontSizeCalculatorProtocol
-    public var textRecognitionNeeded = true
+    public var textRecognitionNeeded = false
     
     public init() {
         self.fontSizeCalculator = NefertitiFontSizeCalculator()
