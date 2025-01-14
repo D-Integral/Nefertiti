@@ -13,6 +13,7 @@ import NefertitiFontSizeCalculator
 
 public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
     public var fontSizeCalculator: NefertitiFontSizeCalculatorProtocol
+    public var textRecognitionNeeded = true
     
     public init() {
         self.fontSizeCalculator = NefertitiFontSizeCalculator()
@@ -156,9 +157,11 @@ public class NefertitiSearchablePDFMaker: NefertitiPDFMakerProtocol {
         context.beginPage(withBounds: pageRect,
                           pageInfo: [:])
         
-        scanResult.recognizedTexts.forEach { recognizedText in
-            if let recognizedText = recognizedText as? VisionRecognizedText {
-                self.fillTextLayer(with: recognizedText.recognizedText, in: pageRect)
+        if textRecognitionNeeded {
+            scanResult.recognizedTexts.forEach { recognizedText in
+                if let recognizedText = recognizedText as? VisionRecognizedText {
+                    self.fillTextLayer(with: recognizedText.recognizedText, in: pageRect)
+                }
             }
         }
         
