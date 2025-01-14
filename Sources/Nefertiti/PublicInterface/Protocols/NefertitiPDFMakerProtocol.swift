@@ -12,6 +12,7 @@ import NefertitiFontSizeCalculator
 
 public protocol NefertitiPDFMakerProtocol {
     var fontSizeCalculator: NefertitiFontSizeCalculatorProtocol { get }
+    var textRecognitionNeeded: Bool { get set }
     
     func generatePdfDocumentFile(from documentImages: [UIImage],
                                  completionHandler: @escaping ((any NefertitiFileProtocol)?, Error?) -> ()) -> ()?
